@@ -1,0 +1,15 @@
+.loader {
+    margin: 2em 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*
+    Set the color of the icon
+  */
+svg path,
+svg rect {
+    fill: rgb(106, 221, 221);
+}
