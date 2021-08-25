@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Books</title>
-</head>
-<body>
-    <div id="App"></div>
-    <script type="module" src="./index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+            rel="stylesheet"
+        />
+        <!-- style -->
+        <link rel="stylesheet" href="./styles/index.css" />
+        <title>Search Books</title>
+    </head>
+    <body>
+        <div id="App">
+            <header>
+                <span class="logo">searchBook2021</span>
+                <button class="darkmode">🌕</button>
+            </header>
+            <main>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        placeholder="책을 검색하세요 (ex: 제목, 작가)"
+                    />
+                </div>
+                <div class="result-wrapper"></div>
+            </main>
+        </div>
+        <script type="module" src="./index.js"></script>
+    </body>
 </html>
