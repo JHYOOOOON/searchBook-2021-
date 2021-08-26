@@ -7,17 +7,24 @@ export default class ResultSection {
             pageNum: null,
         };
         this.$target = document.querySelector(".result-wrapper");
+        this.section = document.createElement("section");
+
         this.render();
     }
 
     setState(nxtState) {
         this.state = nxtState;
-        if (this.state.pageNum === 1) this.$target.innerText = "";
+        if (this.state.pageNum === 1) {
+            this.$target.innerHTML = "";
+            this.section.innerHTML = "";
+        }
         this.render();
     }
 
     printData() {
+        console.log("printData");
         this.state.data.map((item) => {
+            console.log(item);
             const card = document.createElement("div");
             card.className = "card";
 
@@ -46,15 +53,24 @@ export default class ResultSection {
 
             card.appendChild(img);
             card.appendChild(right);
-            this.$target.appendChild(card);
+            this.section.appendChild(card);
         });
     }
 
     render() {
         if (this.state.data) {
+            if (!document.querySelector(".keyword-title")) {
+                const p = document.createElement("p");
+                p.className = "keyword-title";
+                p.innerText = `'${this.state.keyword}' 검색결과`;
+                this.$target.appendChild(p);
+            }
             this.state.data.error
                 ? (this.$target.innerHTML = `<div>데이터를 가져오는 도중 문제가 발생했습니다.</div>`)
-                : this.printData();
+                : this.state.data.length
+                ? this.printData()
+                : (this.section.innerHTML = `<div>데이터가 없습니다.</div>`);
         }
+        this.$target.appendChild(this.section);
     }
 }

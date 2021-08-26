@@ -1,17 +1,22 @@
 .result-wrapper {
+    padding: 30px 45px;
+}
+
+.keyword-title {
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+section {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    justify-content: space-between;
 }
 
 .card {
     display: flex;
     flex-basis: 47%;
     margin-bottom: 25px;
-}
-
-.card:nth-child(2n + 1) {
-    margin-right: 3%;
 }
 
 .thumbnail {
