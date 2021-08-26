@@ -9,6 +9,7 @@ export default class App {
             resultSection.setState({
                 keyword,
                 data: response.documents,
+                pageNum: pageNum,
             });
             inputSection.setState(response.meta.is_end);
         };

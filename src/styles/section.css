@@ -1,0 +1,55 @@
+.result-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {
+    display: flex;
+    flex-basis: 47%;
+    margin-bottom: 25px;
+}
+
+.card:nth-child(2n + 1) {
+    margin-right: 3%;
+}
+
+.thumbnail {
+    margin-right: 15px;
+}
+
+.card-right {
+    padding: 10px 0;
+}
+
+.title {
+    line-height: 1.1em;
+    font-weight: 700;
+}
+
+.author {
+    font-size: 14px;
+    color: #555;
+    margin: 7px 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.1em;
+    height: 1.1em;
+}
+
+.contents {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    height: 6em;
+}

@@ -4,34 +4,41 @@ export default class ResultSection {
         this.state = {
             keyword: null,
             data: null,
+            pageNum: null,
         };
         this.$target = document.querySelector(".result-wrapper");
         this.render();
     }
 
     setState(nxtState) {
-        if (this.state.keyword !== nxtState.keyword)
-            this.$target.innerText = "";
         this.state = nxtState;
+        if (this.state.pageNum === 1) this.$target.innerText = "";
         this.render();
     }
 
     printData() {
         this.state.data.map((item) => {
             const card = document.createElement("div");
+            card.className = "card";
 
             const img = document.createElement("img");
             img.src = item.thumbnail;
+            img.className = "thumbnail";
 
             const right = document.createElement("div");
+            right.className = "card-right";
+
             const title = document.createElement("p");
             title.innerText = item.title;
+            title.className = "title";
 
             const author = document.createElement("p");
             author.innerText = item.authors.join(", ");
+            author.className = "author";
 
             const contents = document.createElement("p");
-            contents.innerText = item.contents;
+            contents.innerText = `${item.contents} ...`;
+            contents.className = "contents";
 
             right.appendChild(title);
             right.appendChild(author);

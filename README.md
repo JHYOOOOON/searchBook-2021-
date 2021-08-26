@@ -42,8 +42,28 @@ fetch(`${API_ENDPOINT}/v3/search/book?query=${keyword}&page=${pageNum}`, {
 
 <strong>📚 2일차(0825)</strong>
 
--   [ ] 무한스크롤 구현 -> 블로그에 글 작성
+-   [x] 무한스크롤 구현
 -   [ ] 데이터 양이 많을 경우 레이지로딩 구현
+
+```
+// InputSection.js
+handleScroll = () => {
+        if (
+            !this.isEnd &&
+            this.keyword &&
+            Math.ceil(window.innerHeight + window.scrollY) >=
+                this.$app.scrollHeight
+        ) {
+            this.onSearch(this.keyword, ++this.pageNum);
+        }
+    };
+```
+
+😎 window.innerHeight<br/>
+보이는 창 height
+
+😎 window.scrollY<br/>
+스크롤한 값<br/>
 
 <strong>📚 3일차(0826)</strong>
 

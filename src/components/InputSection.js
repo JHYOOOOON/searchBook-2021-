@@ -26,10 +26,10 @@ export default class InputSection {
 
     handleScroll = () => {
         if (
-            Math.ceil(window.innerHeight + window.scrollY) >=
-                this.$app.scrollHeight &&
+            !this.isEnd &&
             this.keyword &&
-            !this.isEnd
+            Math.ceil(window.innerHeight + window.scrollY) >=
+                this.$app.scrollHeight
         ) {
             this.onSearch(this.keyword, ++this.pageNum);
         }

@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./loader.css";
+@import "./section.css";
 
 html {
     font-family: "Nanum Gothic", sans-serif;
