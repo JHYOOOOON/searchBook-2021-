@@ -12,10 +12,7 @@ export const request = async (keyword, pageNum) => {
             }
         )
             .then((res) => res.json())
-            .then((data) => {
-                console.log(data, ":::data");
-                return data;
-            });
+            .then((data) => data);
     } catch (error) {
         response = {
             error,

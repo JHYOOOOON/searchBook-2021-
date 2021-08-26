@@ -14,17 +14,11 @@ export default class ResultSection {
 
     setState(nxtState) {
         this.state = nxtState;
-        if (this.state.pageNum === 1) {
-            this.$target.innerHTML = "";
-            this.section.innerHTML = "";
-        }
         this.render();
     }
 
     printData() {
-        console.log("printData");
         this.state.data.map((item) => {
-            console.log(item);
             const card = document.createElement("div");
             card.className = "card";
 
@@ -44,7 +38,7 @@ export default class ResultSection {
             author.className = "author";
 
             const contents = document.createElement("p");
-            contents.innerText = `${item.contents} ...`;
+            contents.innerText = item.contents ? `${item.contents} ...` : "";
             contents.className = "contents";
 
             right.appendChild(title);
@@ -65,6 +59,12 @@ export default class ResultSection {
                 p.innerText = `'${this.state.keyword}' 검색결과`;
                 this.$target.appendChild(p);
             }
+
+            if (this.state.pageNum === 1) {
+                this.$target.innerHTML = "";
+                this.section.innerHTML = "";
+            }
+
             this.state.data.error
                 ? (this.$target.innerHTML = `<div>데이터를 가져오는 도중 문제가 발생했습니다.</div>`)
                 : this.state.data.length

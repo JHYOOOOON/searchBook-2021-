@@ -35,12 +35,13 @@ main {
 }
 .input-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 input {
     font-family: "Nanum Gothic", sans-serif;
     width: 300px;
+    margin: 0 auto;
     font-size: 18px;
     padding: 5px 8px;
     border: 2px solid rgb(209, 209, 209);
@@ -51,4 +52,15 @@ input {
 input:focus {
     outline: none;
     border: 2px solid rgb(106, 221, 221);
+}
+
+.cur-keywords {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.cur-keyword {
+    margin-right: 5px;
 }

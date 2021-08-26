@@ -23,8 +23,17 @@ export default class App {
                 pageNum: pageNum,
             });
 
-            inputSection.setState(response.meta.is_end);
+            inputSection.setState({
+                keywords,
+                isEnd: response.meta.is_end,
+            });
         };
+
+        (() => {
+            let keywords = JSON.parse(localStorage.getItem("keywords"));
+            if (keywords.length >= 1)
+                onSearch(keywords[keywords.length - 1], 1);
+        })();
 
         const inputSection = new InputSection($target, onSearch);
         const resultSection = new ResultSection($target);
