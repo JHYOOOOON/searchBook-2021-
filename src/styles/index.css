@@ -28,6 +28,7 @@ header {
 
 .logo {
     font-family: "Knewave", cursive;
+    cursor: pointer;
 }
 
 /* input */
@@ -35,6 +36,7 @@ main {
     padding-top: 30px;
 }
 .input-wrapper {
+    padding: 0 45px;
     display: flex;
     flex-direction: column;
 }
@@ -57,6 +59,7 @@ input:focus {
 
 .cur-keywords {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
     gap: 10px;

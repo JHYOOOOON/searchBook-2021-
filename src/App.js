@@ -1,6 +1,7 @@
 import { request } from "./api/api.js";
 import InputSection from "./components/InputSection.js";
 import ResultSection from "./components/ResultSection.js";
+import Header from "./components/Header.js";
 
 const MAX_KEYWORD = 5;
 
@@ -36,6 +37,7 @@ export default class App {
                 onSearch(keywords[keywords.length - 1], 1);
         })();
 
+        const header = new Header($target);
         const inputSection = new InputSection($target, onSearch);
         const resultSection = new ResultSection($target);
     }
