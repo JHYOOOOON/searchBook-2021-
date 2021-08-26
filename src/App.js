@@ -26,6 +26,7 @@ export default class App {
             inputSection.setState({
                 keywords,
                 isEnd: response.meta.is_end,
+                keyword,
             });
         };
 

@@ -23,14 +23,14 @@ export default class ResultSection {
             card.className = "card";
 
             const img = document.createElement("img");
-            img.src = item.thumbnail;
+            img.src = item.thumbnail ? item.thumbnail : "/src/img/notFound.png";
             img.className = "thumbnail";
 
             const right = document.createElement("div");
             right.className = "card-right";
 
             const title = document.createElement("p");
-            title.innerText = item.title;
+            title.innerHTML = `<a href=${item.url} target="_blank">${item.title}</a>`;
             title.className = "title";
 
             const author = document.createElement("p");
@@ -53,16 +53,18 @@ export default class ResultSection {
 
     render() {
         if (this.state.data) {
-            if (!document.querySelector(".keyword-title")) {
+            // 새검색이면 결과파트 초기화
+            if (this.state.pageNum === 1) {
+                this.$target.innerHTML = "";
+                this.section.innerHTML = "";
+            }
+
+            // '키워드' 검색결과 프린트
+            if (document.querySelector(".keyword-title") === null) {
                 const p = document.createElement("p");
                 p.className = "keyword-title";
                 p.innerText = `'${this.state.keyword}' 검색결과`;
                 this.$target.appendChild(p);
-            }
-
-            if (this.state.pageNum === 1) {
-                this.$target.innerHTML = "";
-                this.section.innerHTML = "";
             }
 
             this.state.data.error

@@ -9,27 +9,25 @@ export default class InputSection {
         this.state = {
             keywords: null,
             isEnd: false,
+            keyword: null,
         };
 
         this.onSearch = onSearch;
-        this.keyword = null;
         this.pageNum = 1;
-        this.isEnd = false;
 
         this.render();
     }
 
     setState(nxtState) {
         this.state = nxtState;
-        this.curKeywords.innerHTML = "";
         this.render();
     }
 
     handleKeyup = (e) => {
         if (e.key === "Enter") {
             this.pageNum = 1;
-            this.keyword = this.$target.value;
-            this.onSearch(this.keyword, this.pageNum);
+            this.state.keyword = this.$target.value;
+            this.onSearch(this.state.keyword, this.pageNum);
             this.$target.value = "";
         }
     };
@@ -37,11 +35,11 @@ export default class InputSection {
     handleScroll = () => {
         if (
             !this.state.isEnd &&
-            this.keyword &&
+            this.state.keyword &&
             Math.ceil(window.innerHeight + window.scrollY) >=
                 this.$app.scrollHeight
         ) {
-            this.onSearch(this.keyword, ++this.pageNum);
+            this.onSearch(this.state.keyword, ++this.pageNum);
         }
     };
 
@@ -82,6 +80,8 @@ export default class InputSection {
     };
 
     render() {
+        this.curKeywords.innerHTML = "";
+
         this.state.keywords && this.printKeywords();
 
         this.inputWrapper.appendChild(this.curKeywords);

@@ -51,7 +51,7 @@ input {
 
 input:focus {
     outline: none;
-    border: 2px solid rgb(106, 221, 221);
+    border: 2px solid rgb(32, 201, 201);
 }
 
 .cur-keywords {
