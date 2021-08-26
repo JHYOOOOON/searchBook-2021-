@@ -10,7 +10,7 @@ html,
 body,
 #App {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 /* header */
@@ -19,6 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    top: 0;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px) saturate(80%);
     padding: 13px 15px;

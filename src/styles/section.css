@@ -9,13 +9,10 @@
 
 section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .card {
     display: flex;
-    flex-basis: 47%;
     margin-bottom: 25px;
 }
 
@@ -79,4 +76,21 @@ a:hover {
 
 .curBtn:hover {
     background-color: rgba(32, 201, 201, 0.4);
+}
+
+@media screen and (min-width: 840px) {
+    section {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex-basis: 47%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    section {
+        flex-direction: column;
+    }
 }
