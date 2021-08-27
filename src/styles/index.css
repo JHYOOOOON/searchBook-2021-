@@ -52,6 +52,21 @@ header {
     outline: none;
 }
 
+.darkmode:hover {
+    animation: btnScale 0.5s cubic-bezier(0.645, 0.15, 0.355, 0.845) infinite
+        alternate;
+}
+
+@keyframes btnScale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+}
+
 /* input */
 main {
     padding-top: 30px;
