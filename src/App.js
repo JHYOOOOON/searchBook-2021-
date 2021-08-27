@@ -31,14 +31,21 @@ export default class App {
             });
         };
 
-        (() => {
-            let keywords = JSON.parse(localStorage.getItem("keywords"));
-            if (keywords && keywords.length >= 1)
-                onSearch(keywords[keywords.length - 1], 1);
-        })();
-
         const header = new Header($target);
         const inputSection = new InputSection($target, onSearch);
         const resultSection = new ResultSection($target);
+
+        (() => {
+            // 저장된 키워드
+            let keywords = JSON.parse(localStorage.getItem("keywords"));
+            if (keywords && keywords.length >= 1)
+                onSearch(keywords[keywords.length - 1], 1);
+
+            // 저장된 다크모드 (default: "light")
+            let darkmode = localStorage.getItem("darkmode");
+            !darkmode || darkmode === "light"
+                ? header.setState({ darkmode: "light" })
+                : header.setState({ darkmode: "dark" });
+        })();
     }
 }

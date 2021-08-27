@@ -1,0 +1,21 @@
+:root[color-theme="light"] {
+    --background: #fff;
+    --font-color: #000;
+    --not-point-color: #555;
+    --border-color: rgb(224, 224, 224);
+    --input-background: #ebebeb;
+    --header-background: rgba(255, 255, 255 0.2);
+    --point-color: #d2f4f4;
+    --focus-point-color: rgb(118, 214, 214);
+}
+
+:root[color-theme="dark"] {
+    --background: #333;
+    --font-color: rgba(255, 255, 255, 0.9);
+    --not-point-color: #777;
+    --border-color: #999;
+    --input-background: #222;
+    --header-background: rgba(0, 0, 0, 0.2);
+    --point-color: #d2f4f4;
+    --focus-point-color: #7fd8d8;
+}
