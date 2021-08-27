@@ -1,5 +1,6 @@
 .result-wrapper {
-    padding: 30px 0;
+    box-sizing: border-box;
+    padding: 30px 45px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -72,12 +73,12 @@ a:hover {
     border: none;
     padding: 5px 7px;
     border-radius: 5px;
-    background-color: rgba(32, 201, 201, 0.2);
+    background-color: #d2f4f4;
     transition: 0.2s;
 }
 
 .curBtn:hover {
-    background-color: rgba(32, 201, 201, 0.4);
+    background-color: #7fd8d8;
 }
 
 @media screen and (min-width: 840px) {
