@@ -5,12 +5,12 @@
 
 <strong>📚 해야하는 것</strong>
 
--   [ ] 책 검색(카카오 검색 api 이용)
--   [ ] 최근 키워드 5개까지 저장, 키워드 클릭하면 검색 가능
+-   [x] 책 검색(카카오 검색 api 이용)
+-   [x] 최근 키워드 5개까지 저장, 키워드 클릭하면 검색 가능
 -   [ ] 데이터 캐싱
--   [ ] 무한스크롤
--   [ ] 다크모드
--   [ ] 반응형
+-   [x] 무한스크롤
+-   [x] 다크모드
+-   [x] 반응형
 
 ---
 
@@ -73,9 +73,23 @@ handleScroll = () => {
 <strong>📚 4일차(0827)</strong>
 
 -   [ ] 데이터캐싱 -> 페이지가 계속 들어오는데 할 수 있나..? 일단 보류
--   [ ] 다크모드
--   [ ] 로딩중인거 보이게끔 만들기
+-   [x] 다크모드
+
+😎 다크모드 구현 방식
+
+```
+// Header.js
+changeMode = (mode) => {
+    document.documentElement.setAttribute("color-theme", mode);
+    localStorage.setItem("darkmode", mode);
+};
+```
+
+-   html에 color-theme 속성을 줌
+-   바꿀때마다 localStorage에 darkmode를 바꿔줌<br/>
+    → 처음에 들어왔을 때 저번에 저장한 모드로 그려주게끔 함
 
 <strong>📚 5일차(0828)</strong>
 
+-   [ ] 로딩중인거 보이게끔 만들기(Loader.js 만들어둔 거 이용)
 -   [ ] 반응형 및 css 손보기
