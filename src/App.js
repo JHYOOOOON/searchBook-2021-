@@ -33,7 +33,7 @@ export default class App {
 
         (() => {
             let keywords = JSON.parse(localStorage.getItem("keywords"));
-            if (keywords.length >= 1)
+            if (keywords && keywords.length >= 1)
                 onSearch(keywords[keywords.length - 1], 1);
         })();
 

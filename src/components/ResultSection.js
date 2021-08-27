@@ -23,7 +23,7 @@ export default class ResultSection {
             card.className = "card";
 
             const img = document.createElement("img");
-            img.src = item.thumbnail ? item.thumbnail : "/src/img/notFound.png";
+            img.src = item.thumbnail ? item.thumbnail : "../img/notFound.png";
             img.className = "thumbnail";
 
             const right = document.createElement("div");

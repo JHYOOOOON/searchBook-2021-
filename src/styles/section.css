@@ -1,5 +1,7 @@
 .result-wrapper {
-    padding: 30px 45px;
+    padding: 30px 0;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .keyword-title {
