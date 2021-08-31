@@ -2,12 +2,14 @@ import { request } from "./api/api.js";
 import InputSection from "./components/InputSection.js";
 import ResultSection from "./components/ResultSection.js";
 import Header from "./components/Header.js";
+import Loader from "./components/Loader.js";
 
 // 키워드 몇개 저장할지
 const MAX_KEYWORD = 3;
 export default class App {
     constructor($target) {
         const onSearch = async (keyword, pageNum) => {
+            const loader = new Loader($target);
             const response = await request(keyword, pageNum);
 
             let keywords = JSON.parse(localStorage.getItem("keywords"));
@@ -29,6 +31,8 @@ export default class App {
                 isEnd: response.meta.is_end,
                 keyword,
             });
+
+            loader.removeLoader();
         };
 
         const header = new Header($target);
