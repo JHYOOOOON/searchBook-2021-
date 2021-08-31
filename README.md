@@ -89,7 +89,7 @@ changeMode = (mode) => {
 -   바꿀때마다 localStorage에 darkmode를 바꿔줌<br/>
     → 처음에 들어왔을 때 저번에 저장한 모드로 그려주게끔 함
 
-<strong>📚 5일차(0828)</strong>
+<strong>📚 5일차(0831)</strong>
 
--   [ ] 로딩중인거 보이게끔 만들기(Loader.js 만들어둔 거 이용)
--   [ ] 반응형 및 css 손보기
+-   [x] 로딩중인거 보이게끔 만들기(Loader.js 만들어둔 거 이용)
+-   [x] 반응형 및 css 손보기
