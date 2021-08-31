@@ -17,6 +17,7 @@ body,
 body {
     background-color: var(--background);
     color: var(--font-color);
+    min-width: 320px;
 }
 
 /* header */

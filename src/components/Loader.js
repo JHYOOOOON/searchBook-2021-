@@ -7,7 +7,8 @@ export default class Loader {
     }
 
     removeLoader() {
-        this.section.removeChild(this.loader);
+        if (this.section.contains(this.loader))
+            this.section.removeChild(this.loader);
     }
 
     render() {
