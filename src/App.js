@@ -3,8 +3,8 @@ import InputSection from "./components/InputSection.js";
 import ResultSection from "./components/ResultSection.js";
 import Header from "./components/Header.js";
 
-const MAX_KEYWORD = 5;
-
+// 키워드 몇개 저장할지
+const MAX_KEYWORD = 3;
 export default class App {
     constructor($target) {
         const onSearch = async (keyword, pageNum) => {
