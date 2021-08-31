@@ -3,6 +3,22 @@
 [searchBook](https://github.com/JHYOOOOON/searchBook)<br/>
 &nbsp;이 프로젝트를 기능을 추가해서 다시 만들어보는 프로젝트<br/>
 
+<strong>📚 결과물 링크</strong><br/>
+[searchBook2021](https://search-book2021.herokuapp.com/)
+
+<strong>📚 스크린샷</strong>
+
+-   PC (1500px)<br/>
+    <img src="https://user-images.githubusercontent.com/50460114/131496050-855b1455-03e6-4a65-ab95-a6362a5e9507.png" width="500px"/>
+
+-   Tablet (720px)<br/>
+    <img src="https://user-images.githubusercontent.com/50460114/131496272-40d2e4e6-5fd3-4a3f-ae72-d971375c03b7.png" width="500px"/>
+
+-   Mobile (360px)<br/>
+    <img src="https://user-images.githubusercontent.com/50460114/131496680-695c8379-847c-43a9-9cd8-587ac80dbcd4.png" width="300px"/>
+
+---
+
 <strong>📚 해야하는 것</strong>
 
 -   [x] 책 검색(카카오 검색 api 이용)
